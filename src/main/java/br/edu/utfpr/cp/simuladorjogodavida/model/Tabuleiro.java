@@ -17,6 +17,16 @@ public class Tabuleiro {
             }
         }
     }
+    
+    public Tabuleiro(boolean[][] config) {
+        celulas = new Celula[config.length][config.length];
+        for (int i = 0; i < celulas.length; i++) {
+            Celula[] linha = celulas[i];
+            for (int j = 0; j < linha.length; j++) {
+                linha[j] = new Celula(config[i][j]);
+            }
+        }
+    }
 
     public Celula getCelula(int x, int y) {
         return celulas[x][y];

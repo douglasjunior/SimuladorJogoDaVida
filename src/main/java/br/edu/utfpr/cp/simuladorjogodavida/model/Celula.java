@@ -12,6 +12,7 @@ package br.edu.utfpr.cp.simuladorjogodavida.model;
 public class Celula {
 
     private boolean viva;
+    private int visinhos;
 
     public Celula(boolean viva) {
         this.viva = viva;
@@ -23,6 +24,14 @@ public class Celula {
 
     public void setViva(boolean viva) {
         this.viva = viva;
+    }
+
+    public int getVisinhos() {
+        return visinhos;
+    }
+
+    public void setVisinhos(int visinhos) {
+        this.visinhos = visinhos;
     }
 
 }

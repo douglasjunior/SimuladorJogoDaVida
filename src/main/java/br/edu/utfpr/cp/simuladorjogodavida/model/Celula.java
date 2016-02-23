@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.edu.utfpr.cp.simuladorjogodavida.model;
 
 /**
@@ -12,7 +7,7 @@ package br.edu.utfpr.cp.simuladorjogodavida.model;
 public class Celula {
 
     private boolean viva;
-    private int visinhos;
+    private int visinhosVivos;
 
     public Celula(boolean viva) {
         this.viva = viva;
@@ -26,12 +21,19 @@ public class Celula {
         this.viva = viva;
     }
 
-    public int getVisinhos() {
-        return visinhos;
+    public int getVisinhosVivos() {
+        return visinhosVivos;
     }
 
-    public void setVisinhos(int visinhos) {
-        this.visinhos = visinhos;
+    public void setVisinhosVivos(int visinhosVivos) {
+        this.visinhosVivos = visinhosVivos;
     }
 
+    public void incVisinhosVivos() {
+        this.visinhosVivos++;
+    }
+
+    public void resetVisinhosVivos() {
+        this.visinhosVivos = 0;
+    }
 }
